@@ -22,6 +22,15 @@ const thoughtSchema = new Schema(
         id: false,
     }
 );
+const reactionSchema = new mongoose.Schema({
+    username: { type: String, required: true },
+    // This will add a single subdocument to include the manager's information
+    reactionId: [reactionIdSchema],
+    // This will include an array that holds all the employees' information
+    reactionBody: { type: String, required: true },
+    createdAt: { type: Date, default: Date.now },
+  });
+
 // Create a virtual property `fullName` that gets and sets the user's full name
 userSchema
     .virtual('reactionCount')
