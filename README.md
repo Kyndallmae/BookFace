@@ -1,4 +1,4 @@
-# Social-Network-API
+# BookFace
 
 <p>
 <img src="https://img.shields.io/badge/-MongoDB-red" />
